@@ -1,0 +1,40 @@
+:root {
+  font-family: "Noto Sans KR", system-ui, -apple-system, sans-serif;
+  color: #f8fafc;
+  background-color: #0f172a;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  display: block;
+}
+
+.info {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  padding: 10px 14px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  backdrop-filter: blur(8px);
+}
+
+.info strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
