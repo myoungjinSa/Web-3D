@@ -32,7 +32,7 @@ const vertices = new Float32Array([
 ]);
 geometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
 
-const colors = ['#38bdf8', '#a855f7', '#f97316', '#4ade80'];
+const colors = ['#38bdf8', '#a855f7', '#f97316', '#40de00'];
 let colorIndex = 0;
 
 const material = new THREE.MeshBasicMaterial({
@@ -50,7 +50,7 @@ let nextColorIndex = (current) => (current + 1) % colors.length;
 
 const loadWasmModule = async () => {
   try {
-    const moduleFactory = await import('/wasm/color_picker.js');
+    const moduleFactory = await import('./color_picker.js');
     const module = await moduleFactory.default();
     nextColorIndex = module.cwrap('next_color_index', 'number', ['number']);
   } catch (error) {
